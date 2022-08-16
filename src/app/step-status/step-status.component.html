@@ -1,0 +1,29 @@
+<div *ngIf="!trainee" class="panel panel-primary"><br><br>
+  <h3 style="text-align: center;">Not Registered Yet, refresh to confirm</h3>
+  </div>
+
+<div *ngIf="trainee" class="panel panel-primary"><br>
+    <br><h4 style="text-align:center ;"> Registration ID : {{trainee.id}}</h4><br class="brmedium">
+  
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+  
+          <thead class="thead-darks">
+            <tr>
+              <th style="width: 50%;text-align: center;">Course Sector</th>
+              <th style="width: 50%;text-align: center;">Course Name</th>
+            </tr>
+          </thead>
+  
+          <tbody class="tbody-darks">
+            <tr>
+              <td style="width: 50%;text-align: center;">{{trainee.courseSector}}</td>
+              <td style="width: 50%;text-align: center;">{{trainee.courseName}}</td>
+            </tr>
+          </tbody>
+        
+        </table>
+      </div>
+  </div><br>
+  <div class="patt"><h1>Status : {{ trainee.status }}</h1></div><br><br>
+  

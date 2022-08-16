@@ -1,0 +1,18 @@
+.document{
+position: relative;
+width: 35%;
+float: right;
+}
+
+.carousel-inner {
+    height: 400px;
+  }
+
+  .brmedium {
+    display: block;
+   margin: 14px 0;
+   line-height:30px;
+   content: " ";
+}
+  
+  

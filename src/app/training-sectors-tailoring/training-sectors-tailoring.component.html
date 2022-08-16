@@ -1,0 +1,48 @@
+<div class="container pt-3 h-100">
+  <div class="panel panel-primary">
+      <div class="panel-heading"><br>
+        <h5>List of Organizations Under Tailoring Sector</h5><br>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead class="thead-darks">
+            <tr>
+              <th>NGO Name</th>
+              <th>NGO State</th>
+              <th>NGO District</th>
+              <th>NGO Type</th>
+              <th>NGO Unique ID</th>
+              <th>NGO e-mail</th>
+              <th>Course Name</th>
+              <th>Course Sector</th>
+              <th>Course Duration</th>
+              <th>Course Mode</th>
+              <th>Maximum People per Course</th>
+              <th>Incharge Name</th>
+              <th>Incharge e-mail</th>
+              <th>Incharge Contact Number</th>
+            </tr>
+          </thead>
+          <tbody class="tbody-darks">
+            <tr *ngFor="let ngo of ngos | async">
+              <td *ngIf="check(ngo.status)">{{ ngo.ngoName }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.ngoState }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.ngoDistrict }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.ngoType }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.ngoUniqueId }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.ngoEmail }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.courseName }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.courseSector }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.courseDuration }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.courseMode }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.maxPeople }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.inChargeName }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.inChargeEmailId }}</td>
+              <td *ngIf="check(ngo.status)">{{ ngo.inChargecontactno }}</td>
+  
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

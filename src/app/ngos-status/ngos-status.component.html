@@ -1,0 +1,28 @@
+<div *ngIf="!ngo" class="panel panel-primary"><br><br>
+  <h3 style="text-align: center;">Not Registered Yet, refresh to confirm</h3>
+  </div>
+<div *ngIf="ngo" class="panel panel-primary"><br>
+    <br><h4 style="text-align:center ;"> Registration ID : {{ngo.id}}</h4><br class="brmedium">
+  
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+  
+          <thead class="thead-darks">
+            <tr>
+              <th style="width: 50%;text-align: center;"> NGO Name</th>
+              <th style="width: 50%;text-align: center;">Course Name</th>
+            </tr>
+          </thead>
+  
+          <tbody class="tbody-darks">
+            <tr>
+              <td style="width: 50%;text-align: center;">{{ngo.ngoName}}</td>
+              <td style="width: 50%;text-align: center;">{{ngo.courseName}}</td>
+            </tr>
+          </tbody>
+        
+        </table>
+      </div>
+  </div><br>
+  <div class="patt"><h1>Status : {{ ngo.status }}</h1></div><br><br>
+

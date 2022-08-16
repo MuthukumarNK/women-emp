@@ -1,0 +1,18 @@
+table {
+    width: 250%;
+  }
+  
+  .thead-darks
+{
+    background-color: black;
+    color: white;
+    font-weight: lighter;
+}
+
+.tbody-darks
+{
+    background: white;
+    color: black;
+}
+  
+  

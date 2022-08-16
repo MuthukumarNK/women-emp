@@ -1,0 +1,49 @@
+<div class="container pt-3 h-100">
+<div class="panel panel-primary">
+    <div class="panel-heading"><br>
+      <h5>List of NGO Applicants</h5><br>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead class="thead-darks">
+          <tr>
+            <th>NGO Name</th>
+            <th>NGO State</th>
+            <th>NGO District</th>
+            <th>NGO Type</th>
+            <th>NGO Unique ID</th>
+            <th>NGO e-mail</th>
+            <th style="text-align:center ;">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="tbody-darks">
+          <tr *ngFor="let ngo of ngos | async">
+            <td>{{ ngo.ngoName }}</td>
+            <td>{{ ngo.ngoState }}</td>
+            <td>{{ ngo.ngoDistrict }}</td>
+            <td>{{ ngo.ngoType }}</td>
+            <td>{{ ngo.ngoUniqueId }}</td>
+            <td>{{ ngo.ngoEmail }}</td>
+
+            <td>
+
+              <button (click)="ngoDetails(ngo.id)" class="btn btn-info" style="margin-left: 50px">Details</button>
+          
+              <button (click)="editNgo(ngo.id)" class="btn btn-secondary" style="margin-left: 50px">Update</button>
+          
+              <button (click)="deleteNgo(ngo.id)" class="btn btn-danger" style="margin-left: 50px">Delete</button>
+           
+            </td>
+
+          </tr>
+        </tbody>
+        
+      </table>
+    </div>
+
+    <br>
+    <div class="back">
+      <button  (click)="addNgo()" class="btn btn-success" style="background-color: none;">Add NGO</button>
+    </div>
+  </div>
+  </div>

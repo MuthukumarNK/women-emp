@@ -1,0 +1,37 @@
+body
+{
+  padding: 40px;
+  background-image: linear-gradient(#e8f0ff 0%, white 52.08%);
+  color: #0e3481;
+}
+
+.header .lead 
+{
+  max-width: 75%;
+}
+
+.header .lead-1 
+{
+  max-width: 100%;
+  padding: 0px 100px;
+}
+
+.header .lead-2 
+{
+  max-width: 50%;
+}
+
+/** Below CSS is completely optional **/
+.gallery-item 
+{
+  width: 200px;
+  padding: 5px;
+}
+
+.a
+{
+  text-justify: auto;
+  font-style: oblique;
+}
+
+

@@ -1,0 +1,24 @@
+body {
+    padding: 40px;
+    background-image: linear-gradient(#e8f0ff 0%, white 52.08%);
+    color: #0e3481;
+    min-height: 100vh;
+  }
+  
+  .header .lead {
+    max-width: 75%;
+  }
+
+  .header .lead-1 {
+    max-width: 60%;
+  }
+  
+  .header .lead-2 {
+    max-width: 50%;
+  }
+  
+  .gallery-item {
+    width: 200px;
+    padding: 5px;
+  }
+  

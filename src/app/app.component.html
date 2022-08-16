@@ -1,0 +1,174 @@
+<div>
+  <section class="nav-section">
+  
+    <div
+      class="bg-custom-1 rounded d-flex justify-content-between"
+      style="background-color: #e3f2fd"
+    >
+    
+      <ul class="nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            style="color: rgb(0, 0, 0)"
+            aria-current="page"
+            routerLink="/home"
+            >HOME</a
+          >
+        </li>
+          
+      </ul>
+      
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" style="color: rgb(0, 0, 0)" routerLink="/contact-us"
+            >CONTACT US</a
+          >
+        </li>
+        <li *ngIf="!userService.isUserLoggedIn()" class="nav-item">
+          <a class="nav-link" style="color: rgb(0, 0, 0)" routerLink="/login-register"
+            >| LOGIN</a
+          >
+
+          <li *ngIf="userService.isUserLoggedIn()" class="nav-item">
+            <a class="nav-link" style="color: rgb(0, 0, 0)" routerLink="/login-register"
+              >| LOGOUT</a
+            >
+        </li>
+      </ul>
+    </div>
+    
+  
+    <div>
+      <nav
+        class="bg-custom-2 navbar navbar-dark my-2 rounded-1"
+        style="background-color: #000000"
+      >
+        <div class="d-flex align-items-center w-100">
+          <a class="navbar-brand mx-2">
+            <img
+              src="assets/logo.png"
+              alt=""
+              width="100"
+              height="100"
+              class="d-inline-block align-text-mid"
+            />
+          </a>
+          <h2 *ngIf="!(userService.isTraineeLoggedIn() || userService.isNgoLoggedIn())" class="w-100 text-center">MINISTRY OF WOMEN & CHILD DEVELOPMENT</h2>
+          <h2 *ngIf="(userService.isUserLoggedIn() && userService.isTraineeLoggedIn())" class="w-100 text-center" routerLink="step-home"> Support to Training and Employment Programme for Women (STEP)</h2>
+          <h2 *ngIf="userService.isNgoLoggedIn()" class="w-100 text-center" routerLink="ngos-home"> Non Governmental Organizations (NGOs) </h2>
+        </div>
+      </nav>
+    </div>
+  
+    <div>
+      <nav class="bg-custom-2  navbar-expand-lg navbar-light ">
+        <div class="container-fluid d-flex">
+          <div class="collapse navbar-collapse navbar menu" id="navbarNav">
+            <ul class="navbar-nav d-flex justify-content-around w-100">
+              <li *ngIf="!userService.isNgoLoggedIn()" class="nav-item">
+                <a class="navbar-brand" routerLink="/about-us">ABOUT US</a>
+              </li>
+              <li *ngIf="(userService.isUserLoggedIn() && userService.isTraineeLoggedIn())"  class="nav-item">
+                <a class="navbar-brand" routerLink="/guidelines"
+                  >GUIDELINES</a>
+
+              <li *ngIf="(userService.isUserLoggedIn() && userService.isTraineeLoggedIn())" class="nav-item">
+              <div class="dropdown">
+                <h4 class="dropdown-toggle" data-bs-toggle="dropdown"><span class="light">TRAINING SECTORS</span></h4>
+                <div class="dropdown-menu">
+                    <a routerLink="training-sectors-agriculture" class="dropdown-item">Agriculture</a>
+                    <a routerLink="training-sectors-tailoring" class="dropdown-item">Tailoring</a>
+                    <a routerLink="training-sectors-stitching" class="dropdown-item">Stitching</a>
+                </div>
+              </div>
+              </li>
+
+              <li *ngIf="(userService.isUserLoggedIn() && userService.isTraineeLoggedIn())"  class="nav-item">
+                <a class="navbar-brand" routerLink="/step-ngos"
+                  >NGOs</a>
+                
+                  
+              <li *ngIf="(userService.isUserLoggedIn() && userService.isTraineeLoggedIn())" class="nav-item">
+                <a class="navbar-brand" routerLink="/step-registration"
+                  >REGISTRATION</a>
+
+              <li *ngIf="(userService.isUserLoggedIn() && userService.isTraineeLoggedIn())"  class="nav-item">
+                <a class="navbar-brand" routerLink="/step-status"
+                  >STATUS</a>
+
+              <li *ngIf="!userService.isUserLoggedIn()" class="nav-item">
+                <a class="navbar-brand" routerLink="/legislations"
+                  >LEGISLATIONS & POLICY</a>
+              </li>
+              <li *ngIf="userService.isNgoLoggedIn()"  class="nav-item">
+                <a class="navbar-brand" routerLink="/guidelines"
+                  >CRITERIA</a>
+              </li>
+              <li *ngIf="userService.isNgoLoggedIn()"  class="nav-item">
+                <a class="navbar-brand" routerLink="/ngos-organizations"
+                  >ORGANIZATIONS</a>
+              </li>
+              <li *ngIf="userService.isNgoLoggedIn()"  class="nav-item">
+                <a class="navbar-brand" routerLink="/ngos-fundingnorms"
+                  >FUNDING NORMS</a>
+              </li>
+              <li *ngIf="userService.isNgoLoggedIn()"  class="nav-item">
+                <a class="navbar-brand" routerLink="/ngos-register"
+                  >REGISTER</a>
+              </li>
+              <li *ngIf="userService.isNgoLoggedIn()"  class="nav-item">
+                <a class="navbar-brand" routerLink="/ngos-status"
+                  >STATUS</a>
+              </li>
+              <li *ngIf="!userService.isUserLoggedIn()" class="nav-item">
+                <a class="navbar-brand" routerLink="/login-register">STEP</a>
+              </li>
+              <li *ngIf="!userService.isUserLoggedIn()" class="nav-item">
+                <a class="navbar-brand" routerLink="/login-register">NGOS</a>
+              </li>
+              <li *ngIf="!userService.isUserLoggedIn()" class="nav-item">
+                <a class="navbar-brand" routerLink="/admin-login">ADMIN</a>
+              </li>
+
+              <li *ngIf="userService.isUserLoggedIn() && !(userService.isTraineeLoggedIn() || userService.isNgoLoggedIn())" class="nav-item">
+                <a class="navbar-brand" routerLink="/admin-ngo">NGO</a>
+              </li>
+
+              <li *ngIf="userService.isUserLoggedIn() && !(userService.isTraineeLoggedIn() || userService.isNgoLoggedIn())" class="nav-item">
+                <a class="navbar-brand" routerLink="/admin-trainee">TRAINEES</a>
+              </li>
+
+
+             
+
+              <li *ngIf="userService.isTraineeLoggedIn() || userService.isNgoLoggedIn() || !userService.isUserLoggedIn()" class="nav-item">
+                <a class="navbar-brand" routerLink="/faq">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+  
+      
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div><br><br><!--<br><br>-->
+
+<div class="footer-dark">
+  <footer>
+      <div class="container">
+          <h4 class="copyright">All Rights Reserved @ Wipro-Velocity © 2022</h4>
+          <ul class="social_footer_ul">
+            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+            </ul>
+      </div>
+  </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>

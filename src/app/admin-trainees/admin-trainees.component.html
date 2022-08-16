@@ -1,0 +1,51 @@
+<div class="container pt-3 h-100">
+<div class="panel panel-primary">
+    <div class="panel-heading"><br>
+      <h5>List of Trainee Applicants</h5><br>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead class="thead-darks">
+          <tr>
+            <th>Trainee Name</th>
+            <th>Trainee Age</th>
+            <th>Trainee E-mail Id</th>
+            <th>Trainee Contact Number</th>
+            <th>Trainee Address</th>
+            <th>Course Sector</th>
+            <th>Course Name</th>
+            <th style="text-align:center ;">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="tbody-darks">
+          <tr *ngFor="let trainee of trainees | async">
+            <td>{{ trainee.traineeName }}</td>
+            <td>{{ trainee.age }}</td>
+            <td>{{ trainee.email }}</td>
+            <td>{{ trainee.contactNumber }}</td>
+            <td>{{ trainee.street }},{{ trainee.city }} - {{  trainee.pincode }}</td>
+            <td>{{ trainee.courseSector }}</td>
+            <td>{{ trainee.courseName }}</td>
+
+            <td>
+            
+              <button (click)="traineeDetails(trainee.id)" class="btn btn-info" style="margin-left: 45px">Details</button>
+          
+              <button (click)="editTrainee(trainee.id)" class="btn btn-secondary" style="margin-left: 45px">Update</button>
+          
+              <button (click)="deleteTrainee(trainee.id)" class="btn btn-danger" style="margin-left: 45px">Delete</button>
+           
+          </td>
+
+          </tr>
+        </tbody>
+        
+      </table>
+    </div>
+
+    <br>
+    <div class="back">
+      <button  (click)="addTrainee()" class="btn btn-success" style="background-color: none;">Add Trainee</button>
+    </div>
+  </div>
+  </div>

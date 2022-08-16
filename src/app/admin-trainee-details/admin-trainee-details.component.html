@@ -1,0 +1,166 @@
+<br>
+<h3 style="text-align:center ;">Trainee Details</h3>
+<hr style="width:50%; margin-left:25% !important; margin-right:25% !important;" />
+<div *ngIf="trainee" style="text-align: center;">
+    
+
+      <div>
+        <label><h4>Approve Status</h4></label><br>
+    </div>
+        <button (click)="approve()" class="btn btn-success" style="margin-left:-5px">Approve</button>&nbsp;
+        <button (click)="reject()" class="btn btn-danger">Reject</button><br>
+         
+       
+      <br>
+    
+    <table class="table table-bordered" style="width:500px ; margin-left: 380px; text-align: center;">
+        <tbody>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Trainee Id</th>
+            <td style="background: white;">{{trainee.id}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.922); color:white ;">Trainee Name</th>
+            <td style="background: whitesmoke;">{{trainee.traineeName}}</td> 
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Trainee DOB</th>
+            <td style="background: white;">{{trainee.dob}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: whitesmoke;">Trainee Age</th>
+            <td style="background: whitesmoke;">{{trainee.age}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Total Family Members</th>
+            <td style="background: white;">{{trainee.noOfMembers}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.922); color:white ;">No of Children</th>
+            <td style="background: whitesmoke;">{{trainee.noOfChildren}}</td> 
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Maritial Status</th>
+            <td style="background: white;">{{trainee.maritalStatus}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: whitesmoke;">Annual Income</th>
+            <td style="background: whitesmoke;">{{trainee.annualIncome}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Trainee Email Id</th>
+            <td style="background: white;">{{trainee.email}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.922); color:white ;">Contact Number</th>
+            <td style="background: whitesmoke;">{{trainee.contactNumber}}</td> 
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Trainee Address</th>
+            <td style="background: white;">{{trainee.street}}, {{trainee.city}} - {{trainee.pincode}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: whitesmoke;">Aadhar Number</th>
+            <td style="background: whitesmoke;">{{trainee.adhaarNo}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Course Sector</th>
+            <td style="background: white;">{{trainee.courseSector}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.922); color:white ;">Course Name</th>
+            <td style="background: whitesmoke;">{{trainee.courseName}}</td> 
+          </tr>
+    
+        </tbody>
+      </table><br>
+    <!--<div style="background:whitesmoke ; width:600px; margin-left: 325px;">
+    <div>
+        <label><b>trainee Id:</b></label> {{trainee.id}}
+    </div>
+    <br>
+    <div>
+        <label><b>trainee Name:</b></label> {{trainee.traineeName}}
+    </div>
+    <br>
+    <div>
+        <label><b>trainee State:</b></label> {{trainee.traineeState}}
+    </div>
+    <br>
+    <div>
+        <label><b>trainee District:</b></label> {{trainee.traineeDistrict}}
+    </div>
+    <br>
+    <div>
+        <label><b>trainee Type:</b></label> {{trainee.traineeType}}
+    </div>
+    <br>
+    <div>
+        <label><b>trainee Unique Id:</b></label> {{trainee.traineeUniqueId}}
+    </div>
+    <br>
+    <div>
+        <label><b>trainee Email Id:</b></label> {{trainee.traineeEmail}}
+    </div>
+    <br>
+    <div>
+        <label><b>trainee Website Link:</b></label> {{trainee.traineeWebsiteLink}}
+    </div>
+    <br>
+    <div>
+        <label><b>Course Name:</b></label> {{trainee.courseName}}
+    </div>
+    <br>
+    <div>
+        <label><b>Course Sector:</b></label> {{trainee.courseSector}}
+    </div>
+    <br>
+    <div>
+        <label><b>Course Duration:</b></label> {{trainee.courseDuration}}
+    </div>
+    <br>
+    <div>
+        <label><b>Course Mode:</b></label> {{trainee.courseMode}}
+    </div>
+    <br>
+    <div>
+        <label><b>Maximum people in course:</b></label> {{trainee.maxPeople}}
+    </div>
+    <br>
+    <div>
+        <label><b>Project Incharge Name:</b></label> {{trainee.inChargeName}}
+    </div>
+    <br>
+    <div>
+        <label><b>Project Incharge Email Id:</b></label> {{trainee.inChargeEmailId}}
+    </div>
+    <br>
+    <div>
+        <label><b>Project Incharge Number:</b></label> {{trainee.inChargecontactno}}
+    </div>
+    <br>-->
+    <div>
+        <label><b> Uploaded File</b></label> <br><br class="brsmall">
+        <img height="500px" *ngIf="trainee.url" [src]="trainee.url" alt="image"><br>
+    </div><br>
+<!--</div>-->
+
+    
+    <button (click)="list()" class="btn btn-primary">Back to Trainee List</button>
+</div>
+
+

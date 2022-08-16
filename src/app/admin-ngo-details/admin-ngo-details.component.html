@@ -1,0 +1,117 @@
+<br>
+<h3 style="text-align:center ;">NGO Details</h3>
+<hr style="width:50%; margin-left:25% !important; margin-right:25% !important;" />
+<div style="text-align: center;">
+    
+
+      <div>
+        <label><h4>Approve Status</h4></label><br>
+    </div>
+        <button (click)="approve()" class="btn btn-success" style="margin-left:-5px">Approve</button>&nbsp;
+        <button (click)="reject()" class="btn btn-danger">Reject</button><br>
+         
+       
+      <br>
+    
+    <table class="table table-bordered" style="width:500px ; margin-left: 380px; text-align: center;">
+        <tbody>
+
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Current Status</th>
+            <td style="background: white;">{{ngo.status}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Ngo Id</th>
+            <td style="background: white;">{{ngo.id}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.922); color:white ;">Ngo Name</th>
+            <td style="background: whitesmoke;">{{ngo.ngoName}}</td> 
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Ngo State</th>
+            <td style="background: white;">{{ngo.ngoState}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: whitesmoke;">Ngo District</th>
+            <td style="background: whitesmoke;">{{ngo.ngoDistrict}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Ngo Type</th>
+            <td style="background: white;">{{ngo.ngoType}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.922); color:white ;">Ngo Unique Id</th>
+            <td style="background: whitesmoke;">{{ngo.ngoUniqueId}}</td> 
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Ngo Email</th>
+            <td style="background: white;">{{ngo.ngoEmail}}</td>
+          </tr>
+    
+          <tr *ngIf="ngo.ngoWebsiteLink">
+            <th style="background: rgba(21, 18, 18, 0.92); color: whitesmoke;">Ngo Website Link</th>
+            <td style="background: whitesmoke;">{{ngo.ngoWebsiteLink}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Ngo Course Name</th>
+            <td style="background: white;">{{ngo.courseName}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.922); color:white ;">Course Sector</th>
+            <td style="background: whitesmoke;">{{ngo.courseSector}}</td> 
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Course Duration</th>
+            <td style="background: white;">{{ngo.courseDuration}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: whitesmoke;">Course Mode</th>
+            <td style="background: whitesmoke;">{{ngo.courseMode}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Maximum people per course</th>
+            <td style="background: white;">{{ngo.maxPeople}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.922); color:white ;">Project Incharge Name</th>
+            <td style="background: whitesmoke;">{{ngo.inChargeName}}</td> 
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: white;">Project Incharge Email</th>
+            <td style="background: white;">{{ngo.inChargeEmailId}}</td>
+          </tr>
+    
+          <tr>
+            <th style="background: rgba(21, 18, 18, 0.92); color: whitesmoke;">Project Incharge Contact No</th>
+            <td style="background: whitesmoke;">{{ngo.inChargecontactno}}</td>
+          </tr>
+    
+        </tbody>
+      </table><br>
+    
+    <div>
+        <label><b> Uploaded File</b></label> <br><br class="brsmall">
+        <img height="500px" *ngIf="ngo.url" [src]="ngo.url" alt="image"><br>
+    </div><br>
+
+
+    
+    <button (click)="list()" class="btn btn-primary">Back to Ngo List</button>
+</div>
+
+

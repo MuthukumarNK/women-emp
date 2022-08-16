@@ -1,0 +1,223 @@
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8 offset-md-2"><br>
+              <h3>NGO Registration Form</h3>
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                      <div class="form-group">
+                          <label>NGO Name</label>
+                          <input placeholder="Enter NGO Name" type="text" formControlName="ngoName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ngoName.errors }" />
+                          <div *ngIf="submitted && f.ngoName.errors" class="invalid-feedback">
+                              <div *ngIf="f.ngoName.errors.required">NGO Name is required</div>
+                          </div>
+                      </div>
+                    
+
+                    <div class="form-group">
+                      <label>NGO State</label>
+                      <select name="ngoState" id="ngoState" class="form-control" formControlName="ngoState" [ngClass]="{ 'is-invalid': submitted && f.ngoState.errors }">
+                        <option style="color: gray;" [selected]="true == true" disabled>Choose NGO State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                      </select>                     
+                      <div *ngIf="submitted && f.ngoState.errors" class="invalid-feedback">
+                          <div *ngIf="f.ngoState.errors.required">Please Choose a State</div>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label>NGO District</label>
+                      <input placeholder="Enter NGO District" type="text" formControlName="ngoDistrict" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ngoDistrict.errors }" />
+                      <div *ngIf="submitted && f.ngoDistrict.errors" class="invalid-feedback">
+                          <div *ngIf="f.ngoDistrict.errors.required">District Name is required</div>
+                      </div>
+                  </div>
+                 
+                  <div class="form-group">
+                    <label>NGO Type</label>
+
+                    <select name="ngoType" id="ngoType" class="form-control" formControlName="ngoType" [ngClass]="{ 'is-invalid': submitted && f.ngoType.errors }">
+                      <option style="color: gray;" [selected]="true == true" disabled>Choose NGO Type</option>
+                      <option value="Private Sector Companies (Sec 8/25)">Private Sector Companies (Sec 8/25)</option>
+                      <option value="Registered Societies (Non - Government)">Registered Societies (Non - Government)</option>
+                      <option value="Trust (Non - Government)">Trust (Non - Government)</option>
+                      <option value="Other Registered Entities (Non - Government)">Other Registered Entities (Non - Government)</option>
+                      <option value="Academic Institutions (Private)">Academic Institutions (Private)</option>
+                      <option value="Academic Institutions (Govt)">Academic Institutions (Govt)</option>
+                    </select>
+
+                    <div *ngIf="submitted && f.ngoType.errors" class="invalid-feedback">
+                        <div *ngIf="f.ngoType.errors.required">Please Choose a Type</div>
+                    </div>
+                  </div>
+                 
+                  <div class="form-group">
+                      <label>NGO Unique ID</label>
+                      <input placeholder="Enter NGO Unique ID" type="text" formControlName="ngoUniqueId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ngoUniqueId.errors }" />
+                      <div *ngIf="submitted && f.ngoUniqueId.errors" class="invalid-feedback">
+                          <div *ngIf="f.ngoUniqueId.errors.required">NGO Unique ID is required</div>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                   <label>NGO Email</label>
+                    <input placeholder="Enter NGO Email" type="text" formControlName="ngoEmail" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ngoEmail.errors }" />
+                    <div *ngIf="submitted && f.ngoEmail.errors" class="invalid-feedback">
+                        <div *ngIf="f.ngoEmail.errors.required">Email is required</div>
+                        <div *ngIf="f.ngoEmail.errors.email">Email must be a valid email address</div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>NGO Website Link (Optional) </label>
+                    <input placeholder="Enter NGO Website Link" type="text" formControlName="ngoWebsiteLink" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ngoWebsiteLink.errors }" />
+                    <div *ngIf="submitted && f.ngoWebsiteLink.errors" class="invalid-feedback">
+                        
+                    </div>
+                  </div>
+
+                    <div class="form-group">
+                      <label>Course Name</label>
+                      <input placeholder="Enter Course Name" type="text" formControlName="courseName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.courseName.errors }" />
+                      <div *ngIf="submitted && f.courseName.errors" class="invalid-feedback">
+                          <div *ngIf="f.courseName.errors.required">Course Name is required</div>
+                      </div>
+                    </div>
+                  
+                  <div class="form-group">
+                    <label>Course Sector</label>
+
+                    <select name="courseSector" id="courseSector" class="form-control" formControlName="courseSector" [ngClass]="{ 'is-invalid': submitted && f.courseSector.errors }">
+                      <option style="color: gray;" [selected]="true == true" disabled>Choose Course Sector</option>
+                      <option value="Agriculture">Agriculture</option>
+                      <option value="Tailoring">Tailoring</option>
+                      <option value="Stitching">Stitching</option>
+                     </select>
+
+                    <div *ngIf="submitted && f.courseSector.errors" class="invalid-feedback">
+                        <div *ngIf="f.courseSector.errors.required">Please Choose a Sector</div>
+                    </div>
+                 </div>
+
+                 <div class="form-group">
+                  <label>Course Duration</label>
+
+                  <select name="courseDuration" id="courseDuration" class="form-control" formControlName="courseDuration" [ngClass]="{ 'is-invalid': submitted && f.courseDuration.errors }">
+                    <option style="color: gray;" [selected]="true == true" disabled>Choose Course Duration</option>
+                    <option value="1 month">1 month</option>
+                    <option value="2 months">2 months</option>
+                    <option value="3 months">3 months</option>
+                   </select>
+
+                  <div *ngIf="submitted && f.courseDuration.errors" class="invalid-feedback">
+                      <div *ngIf="f.courseDuration.errors.required">Please Select a Duration</div>
+                  </div>
+               </div>
+               
+               
+
+               <div class="form-group bg-gradient-info">
+                <label>Course Mode</label><br class="brmedium">
+                 
+                  &nbsp;<input placeholder="Enter " type="radio" value="Online" formControlName="courseMode"> Online
+                  &nbsp;<input placeholder="Enter " type="radio" value="Offline" formControlName="courseMode"> Offline
+                  <br class="brmedium">
+                 <div *ngIf="submitted && f.courseMode.errors" class="invalid-feedback">
+                    <div *ngIf="f.courseMode.errors.required">Please Select Mode</div>
+                 </div>
+                </div>
+                
+
+                <div class="form-group">
+                  <label>Maximum People per Course</label>
+                  <input placeholder="Enter Maximum Number of People" type="text" formControlName="maxPeople" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.maxPeople.errors }" />
+                  <div *ngIf="submitted && f.maxPeople.errors" class="invalid-feedback">
+                      <div *ngIf="f.maxPeople.errors.required">This field is required</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Project Incharge Name</label>
+                  <input placeholder="Enter Project Incharge Name" type="text" formControlName="inChargeName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.inChargeName.errors }" />
+                  <div *ngIf="submitted && f.inChargeName.errors" class="invalid-feedback">
+                      <div *ngIf="f.inChargeName.errors.required">Incharge Name is required</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Project Incharge Email Id</label>
+                   <input placeholder="Enter Project Incharge Email Id" type="text" formControlName="inChargeEmailId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.inChargeEmailId.errors }" />
+                   <div *ngIf="submitted && f.inChargeEmailId.errors" class="invalid-feedback">
+                       <div *ngIf="f.inChargeEmailId.errors.required">Email is required</div>
+                       <div *ngIf="f.inChargeEmailId.errors.email">Email must be a valid email address</div>
+                   </div>
+                 </div>
+
+                 <div class="form-group">
+                  <label>Project Incharge Contact Number</label><br>
+                   <input placeholder="Enter Project Incharge Contact Number" type="text" formControlName="inChargeContactNo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.inChargeContactNo.errors }" />
+                   <div *ngIf="submitted && f.inChargeContactNo.errors" class="invalid-feedback">
+                       <div *ngIf="f.inChargeContactNo.errors.required">Contact Number is required</div>
+                   </div>
+                 </div>
+
+                 <div class="form-group">
+                  <label>Fund Expected</label>
+                  <input placeholder="Enter Fund Expected" type="text" formControlName="fundExpected" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fundExpected.errors }" />
+                  <div *ngIf="submitted && f.fundExpected.errors" class="invalid-feedback">
+                      <div *ngIf="f.fundExpected.errors.required">Please Enter a Value</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Upload Quotation/Bill/Estimation (Only Image, no pdf or other documents)</label><!--formControlName="image"-->
+                  <input placeholder="Enter " type="file" name="file" formControlName="file" (change)="fileChange($event)"  ng-model="image" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.image.errors }" required #fileInput><br>
+                  <img height="500px" *ngIf="url" [src]="url">
+                  <div *ngIf="submitted && f.image.errors" class="invalid-feedback">
+                 </div>
+                </div>
+
+                  <br>
+                  <div class="form-group">
+                      <button class="btn btn-primary">Register</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

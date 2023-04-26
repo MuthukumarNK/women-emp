@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wipro.velocity.empowerher.model.Admin;
+import com.wipro.velocity.empowerher.model.User;
 import com.wipro.velocity.empowerher.repository.AdminRepository;
 
 
@@ -40,5 +41,13 @@ public class AdminController
 	    }
 	    
 	    return isLogin;
+	}
+	
+	@PostMapping("/registerAdmin")
+	public Admin saveAdmin(@RequestBody Admin admin)
+	{
+		arepo.save(admin);
+		
+		return admin;
 	}
 }

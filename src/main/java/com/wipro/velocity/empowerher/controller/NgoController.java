@@ -14,7 +14,7 @@ import com.wipro.velocity.empowerher.model.Ngo;
 import com.wipro.velocity.empowerher.service.NgoService;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200/")
+@CrossOrigin(origins="https://womenempowerment.azurewebsites.net/")
 @RequestMapping("/api")
 public class NgoController 
 {

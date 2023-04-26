@@ -11,7 +11,7 @@ import com.wipro.velocity.empowerher.repository.UserRepository;
 
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200/")
+@CrossOrigin(origins="https://womenempowerment.azurewebsites.net/")
 @RequestMapping("/api")
 public class UserController 
 {

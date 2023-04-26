@@ -17,7 +17,7 @@ import com.wipro.velocity.empowerher.service.TraineeService;
 
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200/")
+@CrossOrigin(origins="https://womenempowerment.azurewebsites.net")
 @RequestMapping("/api")
 public class TraineeController 
 {

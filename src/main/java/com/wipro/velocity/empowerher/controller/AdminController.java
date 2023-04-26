@@ -13,7 +13,7 @@ import com.wipro.velocity.empowerher.repository.AdminRepository;
 
 
 @RestController
-@CrossOrigin(origins="https://womenempowerment.azurewebsites.net/")
+@CrossOrigin(origins="https://womenempowerment.azurewebsites.net")
 @RequestMapping("/api")
 public class AdminController 
 {
